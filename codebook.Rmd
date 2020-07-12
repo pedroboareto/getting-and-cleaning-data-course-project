@@ -1,0 +1,37 @@
+---
+title: "Code Book"
+output: html_notebook
+---
+
+**Dados**
+Fonte: UCI Machine Learning Repository: Human Activity Recognition and Smart Phone Data
+
+**Variaveis**
+dados = armazena valor do link da base utilizada
+Url = armazena o link do arquivo zip a ser baixado
+atividades = codigo das atividades e seus respectivos nomes
+caracteristicas = nome das caracteristicas tecnicas para teste e treino x
+teste_objetivo = numero objetivo do dataset de teste
+teste_x= medidas de teste
+teste_y= atividades destadas
+treino_objetivo = objetivo dod ataset de treino
+treino_x = medidas de treino
+treino_y = conjunto de atividades de treino
+teste = conjunto de teste agrupado
+treino = conjunto de treino agrupado
+completo = conjunto de treino e teste agrupado
+metadados = conjunto dos nomes de todos os dados
+medias = nome, atividade e caracteristicas com media ou desvio padrão do conjunto completo
+reduzido = conjunto de "metadados" com o conjunto de informações de "medias"
+tidy = base tratada e limpa, resultado do scrip
+
+
+**Transformações**
+Quatro etapas foram desenvolvidas:
+  -Etapa1: download e união dos arquivos de teste e treino para criação de um unico conjunto de dados. Sendo respectivamente referenciado no script da seguinte forma:
+      --Dados de teste: teste_y e teste_x e teste_objetivo
+      --Dados de treino: treino_y e treino_x e treino_objetivo
+      --União: completo (output)
+      -Etapa2: Descrição das atividades que busca dar nomes as variaveis
+      -Etapa3: extração das medidas de media e desvio padrão das atividades com suas caracteriticas. O resultado dessa informação foi armazenado em "reduzido"
+      -Etapa4: criação da base Responsavel por criar a base "tiny" a partir de "reduzido"
